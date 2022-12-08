@@ -28,7 +28,7 @@ class Employee:
 
     def __str__(self):
         exp = f'{self.name}'
-        if self.hours > -1:
+        if self.hours > 0:
             exp += f' works on a contract of {self.hours} hours at {self.pay}/hour'
         else:
             exp += f' works on a monthly salary of {self.pay}'
