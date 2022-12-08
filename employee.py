@@ -2,7 +2,7 @@
 """ENTER YOUR SOLUTION HERE!"""
 
 class Employee:
-    def __init__(self, name, pay, hours=-1 , commission= -1, number = -1):
+    def __init__(self, name, pay, hours = -1 , commission = -1, number = -1):
         self.name = name
         self.pay = pay
         self.hours = hours 
@@ -21,7 +21,7 @@ class Employee:
             pay = self.get_monthly_pay()
             if self.commission > -1:
                 if self.number > -1:
-                    pay += self.get_contract_commission
+                    pay += self.get_contract_commission()
             else:
                 pay += self.get_bonus_commission()
         return pay
