@@ -58,8 +58,10 @@ class Employee:
 
     def get_contract_commission(self):
         commission = self.commission
-        number = self.number
-        return commission*number
+        if self.number > -1:
+            number = self.number
+            commission *= number
+        return commission
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
 billie = Employee('Billie', pay=4000)
