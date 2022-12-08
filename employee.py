@@ -2,7 +2,7 @@
 """ENTER YOUR SOLUTION HERE!"""
 
 class Employee:
-    def __init__(self, name, pay, hours = -1 , commission = -1, number = -1):
+    def __init__(self, name, pay, hours = 0 , commission = 0, number = 0):
         self.name = name
         self.pay = pay
         self.hours = hours 
@@ -10,17 +10,17 @@ class Employee:
         self.number = number
 
     def get_pay(self):
-        if self.hours > -1:
+        if self.hours > 0:
             pay = self.get_hourly_pay()
-            if self.commission > -1:
-                if self.number > -1:
+            if self.commission > 0:
+                if self.number > 0:
                     pay += self.get_contract_commission()
             else:
                 pay += self.get_bonus_commission()
         else:
             pay = self.get_monthly_pay()
-            if self.commission > -1:
-                if self.number > -1:
+            if self.commission > 0:
+                if self.number > 0:
                     pay += self.get_contract_commission()
             else:
                 pay += self.get_bonus_commission()
@@ -32,8 +32,8 @@ class Employee:
             exp += f'works on a contract of {self.hours} hours at {self.pay}/hour'
         else:
             exp += f'works on a monthly salary of {self.pay}'
-        if self.commission > -1:
-            if self.number > -1:
+        if self.commission > 0:
+            if self.number > 0:
                 exp += f'and receives a commission for {self.number} contract(s) at {self.commission}/contract'
             else:
                 exp += f'and receives a bonus commission of {self.commission}'
@@ -44,7 +44,7 @@ class Employee:
 
     def get_hourly_pay(self):
         pay = self.pay
-        if self.hours > -1:
+        if self.hours > 0:
             pay *= self.hours
         return pay
         
@@ -58,7 +58,7 @@ class Employee:
 
     def get_contract_commission(self):
         commission = self.commission
-        if self.number > -1:
+        if self.number > 0:
             number = self.number
             commission *= number
         return commission
