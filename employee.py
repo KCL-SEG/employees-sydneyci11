@@ -20,7 +20,7 @@ class Employee:
         else:
             pay = self.get_monthly_pay()
             if self.commission > -1:
-                if self.numbers > -1:
+                if self.number > -1:
                     pay += self.get_contract_commission
             else:
                 pay += self.get_bonus_commission()
