@@ -29,14 +29,14 @@ class Employee:
     def __str__(self):
         exp = f'{self.name}'
         if self.hours > -1:
-            exp += f'works on a contract of {self.hours} hours at {self.pay}/hour'
+            exp += f' works on a contract of {self.hours} hours at {self.pay}/hour'
         else:
-            exp += f'works on a monthly salary of {self.pay}'
+            exp += f' works on a monthly salary of {self.pay}'
         if self.commission > 0:
             if self.number > 0:
-                exp += f'and receives a commission for {self.number} contract(s) at {self.commission}/contract'
+                exp += f' and receives a commission for {self.number} contract(s) at {self.commission}/contract'
             else:
-                exp += f'and receives a bonus commission of {self.commission}'
+                exp += f' and receives a bonus commission of {self.commission}'
 
         exp += f'. Their total pay is {self.get_pay()}'  
 
