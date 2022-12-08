@@ -38,7 +38,7 @@ class Employee:
             else:
                 exp += f' and receives a bonus commission of {self.commission}'
 
-        exp += f'. Their total pay is {self.get_pay()}'  
+        exp += f'. Their total pay is {self.get_pay()}.'  
 
         return exp
 
