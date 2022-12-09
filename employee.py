@@ -15,15 +15,15 @@ class Employee:
             if self.commission > 0:
                 if self.number > 0:
                     pay += self.get_contract_commission()
-            else:
-                pay += self.get_bonus_commission()
+                else:
+                    pay += self.get_bonus_commission()
         else:
             pay = self.get_monthly_pay()
             if self.commission > 0:
                 if self.number > 0:
                     pay += self.get_contract_commission()
-            else:
-                pay += self.get_bonus_commission()
+                else:
+                    pay += self.get_bonus_commission()
         return pay
 
     def __str__(self):
@@ -81,6 +81,7 @@ jan = Employee('Jan', pay=25, hours=150, number=3, commission=220)
 
 # Robbie works on a monthly salary of 2000 and receives a bonus commission of 1500.  Their total pay is 3500.
 robbie = Employee('Robbie', pay=2000, commission=1500)
+
 
 
 # Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.  Their total pay is 4200.
